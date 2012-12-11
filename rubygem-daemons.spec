@@ -6,14 +6,13 @@
 
 Summary: A toolkit to create and control daemons in different ways
 Name: rubygem-%{gemname}
-Version: 1.0.10
-Release:	2
+Version: 1.1.9
+Release:	1
 Group: Development/Ruby 
 # The entire source code is MIT except daemonize.rb (GPLv2+ or Ruby)
 License: MIT and (GPLv2+ or Ruby)
 URL: http://daemons.rubyforge.org
 Source0: http://gems.rubyforge.org/gems/%{gemname}-%{version}.gem
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: rubygems
 BuildRequires: rubygems
 BuildArch: noarch
@@ -34,17 +33,12 @@ automatic restarting of your processes if they crash.
 %build
 
 %install
-%{__rm} -rf %{buildroot}
 mkdir -p %{buildroot}%{gemdir}
 gem install --local --install-dir %{buildroot}%{gemdir} \
             --force --rdoc %{SOURCE0}
 chmod a+x %{buildroot}%{geminstdir}/examples/run/myserver.rb
 
-%clean
-%{__rm} -rf %{buildroot}
-
 %files
-%defattr(-, root, root)
 %dir %{geminstdir}
 %doc %{gemdir}/doc/%{gemname}-%{version}
 %{geminstdir}/examples/
