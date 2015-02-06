@@ -7,7 +7,7 @@
 Summary: A toolkit to create and control daemons in different ways
 Name: rubygem-%{gemname}
 Version: 1.0.10
-Release:	2
+Release:	3
 Group: Development/Ruby 
 # The entire source code is MIT except daemonize.rb (GPLv2+ or Ruby)
 License: MIT and (GPLv2+ or Ruby)
