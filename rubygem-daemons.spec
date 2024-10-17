@@ -11,7 +11,7 @@ Release:	3
 Group: Development/Ruby 
 # The entire source code is MIT except daemonize.rb (GPLv2+ or Ruby)
 License: MIT and (GPLv2+ or Ruby)
-URL: http://daemons.rubyforge.org
+URL: https://daemons.rubyforge.org
 Source0: http://gems.rubyforge.org/gems/%{gemname}-%{version}.gem
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: rubygems
